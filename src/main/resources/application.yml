@@ -1,4 +1,5 @@
 
 service:
   name: service-b
-  version: 0.0.1
+  version: 0.0.11
+  environment: ${ENV_NAME:test}

@@ -13,9 +13,11 @@ public class HealthController {
     private String service;
     @Value("${service.version}")
     private String version;
+    @Value("${service.environment}")
+    private String environment;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public HealthModel getHealth() {
-        return new HealthModel(service, version);
+        return new HealthModel(service, version, environment);
     }
 }
